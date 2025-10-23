@@ -118,5 +118,67 @@
     </table>
 
     <br/><br/><br/>
+    <form action="#" method="GET" enctype="multipart/form-data">
+        <table>
+            <tr>
+                <td><label for="username">Username</label></td>
+                <td><input type="text" name="username" id="username" placeholder="Input Username" required/></td>
+            </tr>
+            <tr>
+                <td><label for="password">Password</label></td>
+                <td><input type="password" name="password" id="password"/></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email</label></td>
+                <td><input type="email" name="email" id="email" value="user@mail.com"/></td>
+            </tr>
+            <tr>
+                <td><label for="age">Usia</label></td>
+                <td><input type="number" name="age" id="age" min="15" max="50"/></td>
+            </tr>
+            <tr>
+                <td><label for="DateOfBirth">Tanggal Lahir</label></td>
+                <td><input type="date" name="DateOfBirth" id="DataOfBirth"/></td>
+            </tr>
+            <tr>
+                <td><label for="address">Alamat</label></td>
+                <td><textarea name="address" id="address" rows="5">Jalan Pasir Gede Raya</textarea></td>
+            </tr>
+            <tr>
+                <td><label for="gender">Jenis Kelamin</label></td>
+                <td>
+                    <input type="radio" name="gender" value="L">Laki-Laki
+                    <input type="radio" name="gender" value="P">Perempuan
+                </td>
+            </tr>
+            <tr>
+                <td><label for="hobbies">Hobi</label></td>
+                <td>
+                    <input type="checkbox" name="hobbies" value="olahraga">Olahraga
+                    <input type="checkbox" name="hobbies" value="musik">Bermain Musik
+                    <input type="checkbox" name="hobbies" value="travelling">Travelling 
+                </td>
+            </tr>
+            <tr>
+                <td><label for="department">Program Studi</label></td>
+                <td>
+                    <select name="department" required>
+                        <option></option>
+                        <option value="55201" selected>Informatika</option>
+                        <option value="22201">Sipil</option>
+                        <option value="26201" >Industri</option>
+                    </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    <input type="submit" name="submit" value="SUBMIT"/>
+                    </td>
+                    <td>
+                    <input type="reset" name="reset" value="RESET"/>
+                </td>
+                </tr>
+        </table>
+    </form>
 </body>
 </html>

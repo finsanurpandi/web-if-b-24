@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            /* background-color: red; */
+        }
+        .box1, .box2, .box3 {
+            display: box;
+            width: 400px;
+            height: 400px;
+        }
+
+        .box1 {
+            background-color: rgba(255, 240, 40, 0.4);
+        }
+
+        .box2 {
+            background: -webkit-linear-gradient(top left, red,blue);
+        }
+
+        .box3 {
+            background: -webkit-radial-gradient(left, red, orange,yellow, green, blue, indigo, purple);
+        }
+
+        .box4 {
+            position: relative;
+            display: box;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation-name: animasi2;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes animasi {
+            from {background-color: red;}
+            to {background-color: blue;}
+        }
+
+        @keyframes animasi2 {
+            0% {top:0px;left: 0px;background-color: red;}
+            25% {top:0px;left: 300px;background-color: blue;border-radius: 50px;}
+            50% {top:300px;left: 300px;background-color: red;border-radius: 0px}
+            75% {top:300px;left: 0px;background-color: blue;border-radius: 50px;}
+            100% {top:0px;left: 0px;background-color: red;}
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+</body>
+</html>
