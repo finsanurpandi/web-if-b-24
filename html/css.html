@@ -49,13 +49,133 @@
             75% {top:300px;left: 0px;background-color: blue;border-radius: 50px;}
             100% {top:0px;left: 0px;background-color: red;}
         }
+
+        /* CSS LAYOUT */
+        .container {
+            display: flex;
+            background-color: aqua;
+            color: #fff;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: stretch;
+            /* align-content: space-between; */
+            height: 600px;
+        }
+
+        .container > div {
+            background-color: magenta;
+            padding: 50px;
+            margin: 20px;
+        }
+
+        .grid-container {
+            display: grid;
+            background-color: indigo;
+            gap: 10px;
+            grid-template-columns: 0.5fr 1fr 2fr;
+            grid-auto-rows: minmax(100px, auto);
+            grid-template-areas: 
+                "header header header"
+                /* "sidebar sidebar sidebar" */
+                "main main main"
+                "right right right"
+                "footer footer footer"
+            ;
+        }
+
+        .grid-container > div {
+            background-color: lime;
+        }
+
+        /* .item1 {
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+
+        .item2 {
+            grid-row-start: 2;
+            grid-row-end: 4;
+        }
+
+        .item3 {
+            grid-column-start: 2;
+            grid-column-end: 4;
+        }
+
+        .item4 {
+            grid-column-start: 3;
+            grid-column-end: 4;
+        }
+
+        .item5 {
+            grid-column-start: 1;
+            grid-column-end: 4;
+        } */
+        .item1 {
+            grid-area: header;
+         }
+
+         .item2 {
+            /* grid-area: sidebar; */
+            display: none;
+         }
+
+         .item3 {
+            grid-area: main;
+         }
+
+         .item4 {
+            grid-area: right;
+         }
+
+         .item5 {
+            grid-area: footer;
+         }
+
+         @media only screen and (min-width: 600px) {
+            .grid-container {
+                grid-template-areas: 
+                    "header header header"
+                    "sidebar main main"
+                    "sidebar . right"
+                    "footer footer footer"
+                ;
+            }
+
+            .item2 {
+                display: grid;
+                grid-area: sidebar;
+            }
+        }
     </style>
 </head>
 <body>
+    <div>
     <div class="box1"></div>
     <div class="box2"></div>
     <div class="box3"></div>
     <div class="box4"></div>
     <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <img src="image.jpg" style="width: 100vw;"/>
+    <br/><br/><br/><br/><br/>
+    </div>
+<div class="grid-container">
+    <div class="item1">1</div>
+    <div class="item2">2</div>
+    <div class="item3">3</div>
+    <div class="item4">4</div>
+    <div class="item5">5</div>
+</div>
+
+<br/><br/><br/>
+    <!-- CSS LAYOUT -->
+     <div class="container">
+        <div style="order:3; align-self: flex-end;">1</div>
+        <div style="order:5; flex-grow: 2;">2</div>
+        <div style="order:4">3</div>
+        <div style="order:1; align-self: flex-start;">4</div>
+        <div style="order:2; flex-grow: 2;align-self: center;">5</div>
+     </div>
 </body>
 </html>
